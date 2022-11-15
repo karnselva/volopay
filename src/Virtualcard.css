@@ -1,0 +1,188 @@
+
+.virtual-card-container{
+  width: 85%;
+ 
+  margin: auto;
+  margin-top: 50px;
+}
+.virtual-card-header{
+ 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #17191d;
+    font-size:20px;
+}
+.virtual-card-header button{
+  
+    display: flex;
+    align-items: center;
+    
+    font-size: 16px;
+    background-color: white;
+    padding: 4px 10px ;
+    border-radius: 3px;
+    border: 0px solid ;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;    margin: 8px;
+}
+
+.virtual-card-heading{
+    display: flex;
+    align-items: center;
+   
+    
+    
+}
+
+.virtual-card-heading div{
+    display: flex;
+    margin-top: 3px;
+    align-items: center;
+    
+    background-color: #F3F4F6;
+    padding: 3px;
+    color: rgba(0, 0, 255, 0.619);
+    border-radius: 3px;
+    margin-left: 6px;
+    font-size: 12px;
+    font-weight: 650;
+}
+.virtual-card-heading div p{
+  margin-left: 3px;
+}
+
+.tabs-list , .tabs-container div{
+    display: flex;
+    align-items: flex-end;
+    padding-left: 0px;
+    margin-top: 12px;
+  }
+
+  .tabs-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+   
+  }
+  .tabs-list{
+    position: relative;
+  }
+  .tabs-list::after{
+    content: "";
+    position: absolute;
+    width: 85vw;
+    font-family: 'Roboto';
+    z-index: -1;
+    
+    border-bottom: 3px solid #f3f4f6f0;
+    
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+  }
+  .filter{
+    text-align: right;
+    position: relative;
+    margin-top: 16PX;
+  }
+  
+  .filter button{
+    position: relative;
+    display: inline-block;
+    background-color: rgba(234, 230, 230, 0.404);
+    border: 0PX;
+    padding: 6PX 10PX;
+    border-radius: 4px;
+  }
+  .filter button span{
+       margin-left: 10px;
+       font-size: 14px;
+  }
+
+
+  .filter-container{
+    background-color: white;
+    width: 300px;
+    text-align: left;
+    position: absolute;
+    right: 30px;
+    top: 40px;
+    z-index: 100;
+    display: none;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    border-radius: 3px;
+  }
+  .filter-container h5{
+   margin: 10px;
+  }
+  .checkbox{
+   
+    margin: 12px 16px 16px;
+    
+  }
+  .checkbox h6{
+    font-size: 13px;
+    font-weight: 500;
+   
+  }
+  .checkbox label{
+    font-size: 12px;
+    color: #17191d;
+    font-weight: 600;
+   
+  }
+  #check-subscription{
+    
+    margin: 8px 6px 0px 4px;
+  }
+  #check-buffer{
+    margin: 8px 6px 0px 28px;
+   
+  }
+  .show{
+    display: block;
+    
+  }
+
+  .dropdown {
+    width: 270px;
+    position: relative;
+    margin: 12px 16px 16px;
+   
+  }
+  .dropdown:hover .dropdown-list {
+    opacity: 1;
+    visibility: visible;
+  }
+  .dropdown-select {
+   
+    padding: 8px;
+    padding-left: 6px;
+    border-radius: 4px;
+    background-color: white;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.6rem;
+    cursor: pointer;
+    background-color:rgba(234, 230, 230, 0.404);
+    
+  }
+ .dropdown h6{
+  color: rgba(75, 71, 71, 0.874);
+  font-size: 13px;
+  font-weight: 500;
+ }
+.select{
+  font-size: 16px;
+}
+.btn-apply,.btn-clr{
+  width: 115px;
+  margin: 16px 16px 16px;
+  
+}
+.btn-apply{
+  background-color: #ff5a83 !important;
+  color: #F3F4F6;
+ }

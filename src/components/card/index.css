@@ -1,0 +1,85 @@
+
+.card-container{
+    flex-basis: 45%;
+    align-self: flex-start;
+    padding: 14px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;    margin: 8px;
+    
+}
+.card-vendor,.card-spent,.card-available{
+    display:flex;
+    justify-content: space-between;
+   
+}
+.card-vendor,.card-logo{
+    margin-bottom: 10px;
+    
+}
+.card-spent{
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+.card-vendor div button{
+    background-color: transparent;
+    padding: 3px 10px;
+    border-radius: 6px;
+    border: 1px solid #4a4e57;
+    color: #4a4e57;
+    text-align: center;
+    margin-top: 6px;
+}
+.card-vendor div p{
+    color: #4a4e57;
+
+}
+
+.card-vendor div p span{
+    width: 5px;
+    height: 5px;
+    margin: 3px;
+    border-radius: 50%;
+    background-color: #4a4e57;
+    display: inline-block;
+}
+.card-vendor div h3{
+    font-size: 24px;
+    font-weight: 500;
+    font-family: sans-serif;
+}
+.card-spent p span , .card-available p span{
+    display: inline-block;
+    margin-right: 6px;
+    background-color: #ff5a83;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+.card-spent p ,.card-available p{
+    font-size: 18px;
+    font-family:sans-serif;
+}
+
+.card-available p span{
+    background-color: #009E60;
+    
+}
+
+.card-logo{
+    display: flex ;
+    flex-direction: column;
+    justify-content: space-between;
+   
+    margin-bottom: 0px;
+}
+.card-logo div{
+    align-self: center;
+    color:#ff5a83 ;
+    font-size: 18px;
+    background-color:#fffbfc ;
+    text-align: center;
+    padding-top: 10px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;}
+

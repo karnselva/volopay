@@ -1,0 +1,96 @@
+import React, { useEffect, useState } from 'react'
+import { v4 as uuidv4 } from "uuid";
+import {ThreeDots} from 'react-loader-spinner'
+import Card from '../card/index'
+import './index.css'
+
+
+export default function Cards(props) {
+  const[carddetails,setCardDetails]=useState([])
+  const [loading, setLoading] = useState(false);
+  let {isActive} = props
+  isActive=isActive.toLowerCase()
+  
+  
+ 
+  const renderLoadingView = () => (
+    <div className='products-loader-container'>
+    <ThreeDots
+      height="80" 
+      width="80" 
+      
+      radius="9"
+      color="#4fa94d" 
+      ariaLabel="three-dots-loading"
+      wrapperStyle={{}}
+      wrapperClassName=""
+      visible={true}
+ /> </div>
+  )
+  
+  useEffect( () => {
+    async function fetchdata(){
+      
+     
+       
+
+    const apiUrl = `https://6372229707858778618b8e49.mockapi.io/virtualcards/${isActive}?page=1&limit=10&sparkline=false`
+    const options = {
+      
+      method: 'GET',
+    }
+    const response = await fetch(apiUrl, options)
+    if (response.ok === true) {
+      const fetchedData = await response.json()
+      
+      const updatedData = fetchedData.map(card => ({
+        name: card.name,
+        budgetName: card.budget_name,
+        ownerId: card.owner_id,
+        managedBy: card.managed_by,
+        spent: card.spent,
+        availableToSpend: card.available_to_spend,
+        cardType:card.card_type,
+        expiry: card.expiry,
+        limit: card.limit,
+        status: card.status,
+        id: card.id,
+
+
+      }))
+
+      
+        setLoading(false);
+      setCardDetails( (prev) => {
+        return [...prev,...updatedData]
+       } )
+    }
+    /*if (response.status === 401) {
+      this.setState({
+        apiStatus: apiStatusConstants.failure,
+      })
+    }*/
+  
+      
+    }
+    fetchdata()
+
+  },[isActive]);
+
+
+
+
+
+
+
+
+  return (
+    <div className='cards-container'>
+    
+     { carddetails &&  carddetails.map(eachCard => (
+     <Card carddetail={eachCard} key={eachCard.id}/>))  }
+     { loading && renderLoadingView()}
+      
+    </div>
+  )
+}
